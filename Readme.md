@@ -1,5 +1,5 @@
 ---
-title: Template
+title: Übungsblatt 4
 author: Zuletzt bearbeitet von Lukas Schauhuber
 documentclass: scrartcl
 classoption:
