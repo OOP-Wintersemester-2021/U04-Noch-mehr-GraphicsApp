@@ -1,6 +1,6 @@
 ---
-title: Übungsblatt 4
-author: Zuletzt bearbeitet von Lukas Schauhuber
+title: Übungsblatt 4 - More with Graphics App
+author: Zuletzt bearbeitet von Jürgen Hahn
 documentclass: scrartcl
 classoption:
   - a4paper
@@ -12,16 +12,16 @@ header-includes: |
     \pagestyle{fancy}
     \fancyhf{}
     \rhead{OOP WS 2020/21}
-    \lhead{U00 | Template}
+    \lhead{U04 | More with Graphics App}
     \cfoot{\includegraphics[height=2cm]{docs/footer.png}}
     \fancypagestyle{plain}{
       \fancyhf{}
       \rhead{OOP WS 2020/21}
-      \lhead{U00 | Template}
+      \lhead{U04 | More with Graphics App}
       \cfoot[C]{\includegraphics[height=2cm]{docs/footer.png}}}
 ---
 
-# Übungsblatt 4
+# Übungsblatt 4 - More with Graphics App
 
 ## Wichtige Informationen zur Bearbeitung der Aufgabe 
 
@@ -37,7 +37,7 @@ Ein vorbereitetes Starterpaket zur selbständigen Implementierung der Aufgabe fi
 
 **Klasse im Starterpaket:** `Target`
 
-![](docs/target.png)
+![Target](docs/target.png){ width=25% }
 
 Im Starterprojekt für dieses Übungsblatt finden Sie eine Musterlösung
 für das Target-Programm aus der letzten Übung. Bauen Sie den Code so um,
@@ -62,7 +62,7 @@ korrekt läuft.
 Erstellen Sie eine `GraphicsApp`, die einen Ball von links nach rechts
 über die Zeichenfläche springen lässt:
 
-![](docs/bouncingball.png)
+![Bouncing Ball](docs/bouncingball.png){ width=25% }
 
 Der Ball startet in der linken oberen Ecke, fällt dann zu Boden und
 prallt wieder ab, solange er nicht den Bildschirm verlassen hat.
@@ -96,4 +96,39 @@ hieven. Dies können Sie mit dem folgenden Code erreichen:
 `double diff = ball.getY() - (getHeight() - ball.getHeight());`\
 `ball.move(0, -2 * diff);`
 
-![](docs/bouncingBall.gif)
+![Bouncing Ball in Motion](docs/bouncingBall.gif){ width=25% }
+
+## **Farbige Zufallskreise**
+
+Entwickeln Sie eine `GraphicsApp`, die 100 farbige Kreise auf der
+Zeichenfläche darstellt. Jeder der Kreise hat eine zufällige Farbe,
+einen zufälligen Durchmesser zwischen 5 und 50 Pixeln und eine zufällige
+Position auf der Zeichenfläche. Die Kreise müssen alle innerhalb der
+Zeichenfläche dargestellt werden. Verwenden Sie die in der Vorlesung
+vorgestellte Klasse `Random` um alle Zufallswerte zu erzeugen.
+
+![Random Circles](docs/screenshot_randomCircles.png){ width=25% }
+
+Implementieren Sie eine eigene Methode pro zufälliger Eigenschaft der
+Kreise und speichern Sie den Rückgabewert in einer lokalen Variable,
+bevor Sie den Konstruktor der Klasse Ellipse aufrufen:
+
+-   `private Color getNextColor()`
+
+-   `private Point getNextPoint()`
+
+-   `private int getNextDiameter()`
+
+Verwenden Sie (wie immer) geeignete Konstanten, um unveränderliche Werte abzuspeichern.
+
+## **Circle Rain, Circle Rain**
+
+In dieser Aufgabe geht es darum, mit zwei Arrays die Animation von einer beliebigen Anzahl an Kreisen zu verwalten. Über eine Konstanten soll festgelegt werden, wieviele Kreise gezeichnet werden. Entsprechend sollen weitere Konstanten bestimmen, wie breit ein Kreis ist, so dass alle nebeneinander auf die Zeichenfläche passen.
+
+Alle Kreise haben eine Startposition am oberen Bildschirmrand. Zu Beginn des Programms sollen jeweils ein Array mit den Kreisen und ein Array mit Geschwindigkeiten angelegt werden. Beide Arrays sollen die gleiche Größe haben. Die Geschwindigkeiten und die Farbe der Kreise sind zufällig zu wählen.
+
+In der `draw()`-Schleife sollen nun alle Kreise mit der ihnen entsprechenden Geschwindigkeit vertikal nach unten bewegt werden. Stößt ein Kreis am unteren Rand an, so ist seine Position so anzupassen, dass er wieder am oberen Bildschirmrand startet.
+
+In der folgenden GIF-Animation ist das Ergebnis zu sehen:
+
+![Circle Rain](docs/circlerain.gif){ width=25% }
