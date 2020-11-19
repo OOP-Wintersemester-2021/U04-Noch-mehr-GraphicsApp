@@ -4,6 +4,7 @@ import de.ur.mi.oop.app.GraphicsApp;
 import de.ur.mi.oop.colors.Color;
 import de.ur.mi.oop.colors.Colors;
 import de.ur.mi.oop.graphics.Circle;
+import de.ur.mi.oop.launcher.GraphicsAppLauncher;
 
 public class Target extends GraphicsApp {
 
@@ -63,5 +64,9 @@ public class Target extends GraphicsApp {
             ring = new Circle(HORIZONTAL_CENTER, VERTICAL_CENTER, radius, ringColor);
             ring.draw();
         }
+    }
+
+    public static void main(String[] args) {
+        GraphicsAppLauncher.launch();
     }
 }

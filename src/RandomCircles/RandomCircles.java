@@ -1,13 +1,13 @@
-package BouncingBall;
+package RandomCircles;
 
 import de.ur.mi.oop.app.GraphicsApp;
 import de.ur.mi.oop.colors.Color;
 import de.ur.mi.oop.colors.Colors;
 import de.ur.mi.oop.launcher.GraphicsAppLauncher;
 
-public class BouncingBall extends GraphicsApp {
+public class RandomCircles extends GraphicsApp {
 
-    /* Konstanten für Canvas-Aufbau */
+    /* Private Konstanten */
     private static final int CANVAS_HEIGHT = 800;
     private static final int CANVAS_WIDTH = 800;
     private static final int FRAME_RATE = 60;
