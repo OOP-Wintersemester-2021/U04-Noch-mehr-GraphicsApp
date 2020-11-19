@@ -4,6 +4,7 @@ import de.ur.mi.oop.app.GraphicsApp;
 import de.ur.mi.oop.colors.Color;
 import de.ur.mi.oop.colors.Colors;
 import de.ur.mi.oop.graphics.Circle;
+import de.ur.mi.oop.launcher.GraphicsAppLauncher;
 
 public class Target extends GraphicsApp {
 
@@ -66,5 +67,9 @@ public class Target extends GraphicsApp {
         } else {
             return RING_COLOR_UNEVEN;
         }
+    }
+
+    public static void main(String[] args) {
+        GraphicsAppLauncher.launch();
     }
 }

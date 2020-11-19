@@ -4,6 +4,7 @@ import de.ur.mi.oop.app.GraphicsApp;
 import de.ur.mi.oop.colors.Color;
 import de.ur.mi.oop.colors.Colors;
 import de.ur.mi.oop.graphics.Circle;
+import de.ur.mi.oop.launcher.GraphicsAppLauncher;
 
 public class BouncingBall extends GraphicsApp {
 
@@ -84,5 +85,9 @@ public class BouncingBall extends GraphicsApp {
             float diff = ball.getYPos() - (getHeight() - BALL_RADIUS);
             ball.move(0, -2 * diff);
         }
+    }
+
+    public static void main(String[] args) {
+        GraphicsAppLauncher.launch();
     }
 }
