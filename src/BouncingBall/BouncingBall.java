@@ -14,7 +14,6 @@ public class BouncingBall extends GraphicsApp {
     private static final int FRAME_RATE = 60;
     private static final Color BACKGROUND_COLOR = Colors.WHITE;
     private static final int BALL_RADIUS = 15;
-    private static final int BALL_DIAMETER = 2 * BALL_RADIUS;
     private static final float SPEED_REDUCTION_BOUNCE = 0.9f;
     private static final float X_SPEED = 1;
     private static final float INITIAL_YSPEED = 0;
@@ -29,7 +28,6 @@ public class BouncingBall extends GraphicsApp {
      * Die initialize-Methode wird einmalig zum Start des Programms
      * aufgerufen.
      */
-
     @Override
     public void initialize() {
         setupCanvas();
@@ -37,7 +35,7 @@ public class BouncingBall extends GraphicsApp {
     }
 
     private void setupBall() {
-        ball = new Circle(0, 0, BALL_DIAMETER, Colors.RED);
+        ball = new Circle(0, 0, BALL_RADIUS, Colors.RED);
         // Set the initial speed for the ball
         dx = X_SPEED;
         dy = INITIAL_YSPEED;
@@ -52,7 +50,6 @@ public class BouncingBall extends GraphicsApp {
      * Die draw-Methode wird so lange wiederholt aufgerufen, bis das Programm
      * beendet wird.
      */
-
     @Override
     public void draw() {
         drawBackground(BACKGROUND_COLOR);
